@@ -1,5 +1,4 @@
-# NewGround
-NewGround test tasks
+# NewGround test task
 Need write 3 methods and cover them by unit tests:
 1) RemoveDuplicates by loop in loop
 2) Find the smallest positive integer, that is not in array.
