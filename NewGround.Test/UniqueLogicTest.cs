@@ -16,13 +16,14 @@ namespace NewGround.Test
 
         [Theory]
         [InlineData(1, 3)]
-        [InlineData(3, 2, 3)]
+        [InlineData(3, 2, 3, 3,1 )]
         [InlineData(3, 2, -1, 3)]
         [InlineData(3, 2, 3, 1, 2, 5, 2)]
         public void PositiveTest(params int[] inputData)
         {
             var testData = inputData.ToList();
             _logic.RemoveDuplicates(testData);
+            Assert.Equal(inputData.Distinct().Count(), testData.Count);
             Enumerable.SequenceEqual(inputData.Distinct(), testData);
         }
     }

@@ -12,7 +12,10 @@ namespace NewGround
                 for (int j = i + 1; j < list.Count; j++)
                 {
                     if (list[i] == list[j])
+                    {
                         list.RemoveAt(j);
+                        j--;//need check current position in next iteration because list has shifted 
+                    }
                 }
             }
         }
